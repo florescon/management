@@ -41,7 +41,7 @@ class TranslateMissing extends Command
                 if (File::exists($filePath)) {
                     $localeTranslations = json_decode(File::get(lang_path($locale . '.json')), true);
                     $translator = new GoogleTranslate($locale);
-                    $translator->setSource('en');
+                    $translator->setSource('es');
                     $newLocaleTranslations = [];
                     foreach ($baseTranslations as $kbt => $baseTranslation) {
                         if (!array_key_exists($kbt, $localeTranslations)) {

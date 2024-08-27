@@ -40,7 +40,7 @@ class TranslateLangFile extends Command
                 $localeFile = File::get($filePath);
                 $localeFileContent = array_keys(json_decode($localeFile, true));
                 $translator = new GoogleTranslate($locale);
-                $translator->setSource('en');
+                $translator->setSource('es');
                 foreach ($localeFileContent as $key) {
                     $results[$key] = $translator->translate($key);
                 }

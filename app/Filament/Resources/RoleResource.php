@@ -66,6 +66,7 @@ class RoleResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->label(__('Permission name'))
+                    ->formatStateUsing(fn ($state) => __($state)) // Traducción del valor de la columna `name`
                     ->sortable()
                     ->searchable(),
 
@@ -87,7 +88,7 @@ class RoleResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 

@@ -94,7 +94,7 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 (46, 'Manage general settings', 'web', '2022-11-14 12:06:56', '2022-11-14 12:06:56');
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'Default role', 'web', '2022-11-14 12:06:56', '2022-11-14 12:06:56');
+(1, 'Administrador', 'web', '2022-11-14 12:06:56', '2022-11-14 12:06:56');
 
 INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (1, 1),
@@ -148,11 +148,11 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `tw
 (1, 'John DOE', 'john.doe@helper.app', '2022-11-14 12:06:56', '$2a$12$h/.Jq3QGHYoJBLBo8hw1mOtJOmtU.BVJFbBWFC7XAVXmE5gOjdXV.', NULL, NULL, NULL, NULL, '2022-11-14 12:06:56', '2022-11-14 12:06:56', NULL, '16a26769-e643-4570-b3d6-9b9604fe49bc');
 
 INSERT INTO `settings` (`id`, `group`, `name`, `locked`, `payload`, `created_at`, `updated_at`) VALUES
-(1, 'general', 'site_name', 0, '\"Project Management\"', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
+(1, 'general', 'site_name', 0, '\"Francos\"', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
 (2, 'general', 'site_logo', 0, 'null', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
 (3, 'general', 'enable_registration', 0, 'true', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
 (4, 'general', 'enable_social_login', 0, 'true', '2022-11-14 18:11:50', '2022-11-14 18:11:50'),
-(5, 'general', 'site_language', 0, 'en', '2022-11-14 18:11:50', '2022-11-14 18:11:50');
+(5, 'general', 'site_language', 0, 'es', '2022-11-14 18:11:50', '2022-11-14 18:11:50');
 
 ALTER TABLE `settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;

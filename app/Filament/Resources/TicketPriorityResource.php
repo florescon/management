@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TicketPriorityResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = TicketPriority::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-badge-check';

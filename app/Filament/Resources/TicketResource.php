@@ -23,6 +23,8 @@ use Illuminate\Support\HtmlString;
 
 class TicketResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = Ticket::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-ticket';

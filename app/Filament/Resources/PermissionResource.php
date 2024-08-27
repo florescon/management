@@ -24,6 +24,11 @@ class PermissionResource extends Resource
         return __('Permissions');
     }
 
+    public static function canCreate(): bool
+    {
+      return false;
+    }
+    
     public static function getPluralLabel(): ?string
     {
         return static::getNavigationLabel();
@@ -60,6 +65,7 @@ class PermissionResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->label(__('Permission name'))
                     ->sortable()
+                    ->formatStateUsing(fn ($state) => __($state)) // Traducción del valor de la columna `name`
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('created_at')
@@ -72,11 +78,11 @@ class PermissionResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -91,9 +97,9 @@ class PermissionResource extends Resource
     {
         return [
             'index' => Pages\ListPermissions::route('/'),
-            'create' => Pages\CreatePermission::route('/create'),
-            'view' => Pages\ViewPermission::route('/{record}'),
-            'edit' => Pages\EditPermission::route('/{record}/edit'),
+            // 'create' => Pages\CreatePermission::route('/create'),
+            // 'view' => Pages\ViewPermission::route('/{record}'),
+            // 'edit' => Pages\EditPermission::route('/{record}/edit'),
         ];
     }
 }

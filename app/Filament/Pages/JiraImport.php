@@ -26,6 +26,8 @@ class JiraImport extends Page implements HasForms
 
     protected static string $view = 'filament.pages.jira-import';
 
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $slug = 'jira-import';
 
     protected static ?int $navigationSort = 2;

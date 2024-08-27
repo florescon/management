@@ -22,6 +22,8 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ProjectResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = Project::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-archive';

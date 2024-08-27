@@ -25,10 +25,10 @@ class Dashboard extends BasePage
     protected function getWidgets(): array
     {
         return [
-            FavoriteProjects::class,
+            // FavoriteProjects::class,
             LatestActivities::class,
             LatestComments::class,
-            LatestProjects::class,
+            // LatestProjects::class,
             LatestTickets::class,
             TicketsByPriority::class,
             TicketsByType::class,

@@ -51,7 +51,7 @@ class WeeklyReport extends BarChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => __('Weekly time logged'),
+                    'label' => __('Weekly logged time'),
                     'data' => $datasets,
                     'backgroundColor' => [
                         'rgba(54, 162, 235, .6)'

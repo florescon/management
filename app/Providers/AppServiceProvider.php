@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Model;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
         // Configure application
         $this->configureApp();
 
+        Model::unguard();
+        
         // Register custom Filament theme
         Filament::serving(function () {
             Filament::registerTheme(

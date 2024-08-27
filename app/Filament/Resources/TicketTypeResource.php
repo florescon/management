@@ -15,6 +15,8 @@ use Guava\FilamentIconPicker\Tables\IconColumn;
 
 class TicketTypeResource extends Resource
 {
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $model = TicketType::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-check';
